@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 
-const WHATSAPP_NUMBER = "082116253174";
+const WHATSAPP_NUMBER = "6282116253174";
 
 export default function Bantuan() {
   const [nama, setNama] = useState("");

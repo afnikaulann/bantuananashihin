@@ -76,7 +76,7 @@ export default function Hero() {
 
         {/* Tombol CTA dengan animasi pulse */}
         <a
-          href="https://wa.me/082116253174"
+          href="https://wa.me/6282116253174"
           target="_blank"
           rel="noopener noreferrer"
           className="animate-pulse-green btn-hover inline-block green-gradient text-white font-bold text-lg px-10 py-4 rounded-full shadow-green"
