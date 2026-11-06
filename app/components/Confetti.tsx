@@ -13,7 +13,7 @@ export default function Confetti() {
   }>>([]);
 
   useEffect(() => {
-    const colors = ["#0d6e4f", "#1a8a5f", "#c9a227", "#e0b840", "#094d36", "#d4af37"];
+    const colors = ["#064e3b", "#059669", "#d4af37", "#fde047", "#10b981", "#b48608"];
     const newPieces: Array<{
       id: number;
       left: number;

@@ -1,89 +1,79 @@
 "use client";
 
+import Image from "next/image";
+import StarDecor from "./StarDecor";
+import testi1 from "../../img/testi1.png";
+import testi2 from "../../img/testi2.png";
+import testi3 from "../../img/testi3.png";
+import testi4 from "../../img/testi4.png";
+
 export default function Testimonials() {
   const penerima = [
     {
-      img: "/img/0f3d77d8-a6d9-433f-bc9b-106fe6a2d571.jpeg",
-      name: "Aisyah",
-      prize: "Sembako",
-      testimonial: "Alhamdulillah, bantuan sembako ini sangat membantu kebutuhan keluarga kami sehari-hari.",
-      fallback: "A",
-    },
-    {
-      img: "/img/5ceac103-d6a7-418f-bdd6-25c74178bb60.jpeg",
-      name: "Hendra",
-      prize: "Motor",
-      testimonial: "Terima kasih banyak, motor ini sangat membantu aktivitas harian saya dan keluarga.",
-      fallback: "H",
-    },
-    {
-      img: "/img/6e565292-0a59-4aa9-9a2d-84cd30d97ecd.jpeg",
+      img: testi1,
       name: "Siti",
-      prize: "Bantuan Umroh",
-      testimonial: "Terima kasih, bantuan umroh ini mewujudkan impian ibadah keluarga kami.",
-      fallback: "S",
+      prize: "Uang Tunai",
+      testimonial: "Alhamdulillah, bantuan uang tunai ini sangat membantu kebutuhan keluarga kami sehari-hari.",
     },
     {
-      img: "/img/7fc9c378-f34d-4339-846b-624c18ed6fb8.jpeg",
+      img: testi2,
+      name: "Nurhalisa",
+      prize: "Uang Tunai",
+      testimonial: "Terima kasih banyak, bantuan uang tunai ini sangat membantu untuk membayar uang kuliah saya",
+    },
+    {
+      img: testi3,
+      name: "Amir",
+      prize: "Uang Tunai",
+      testimonial: "Alhamdulillah, bantuan uang tunai ini sangat berkah dan bermanfaat untuk modal usaha saya.",
+    },
+    {
+      img: testi4,
       name: "Fahmi",
       prize: "Uang Tunai",
-      testimonial: "Alhamdulillah, bantuan tunai ini sangat membantu kebutuhan mendesak keluarga kami.",
-      fallback: "F",
+      testimonial: "Bantuan uang tunai ini sangat membantu ekonomi saya",
     },
   ];
 
   return (
-    <section className="py-16 px-4 islamic-pattern-bg">
-      <div className="max-w-6xl mx-auto">
-        <h2 className="text-3xl font-bold text-center text-[#1a3c2a] mb-2">
+    <section className="w-full py-16 px-4 islamic-lattice-bg flex flex-col items-center justify-center">
+      <StarDecor />
+      <div className="w-full max-w-6xl mx-auto flex flex-col items-center justify-center">
+        <h2 className="text-3xl font-bold text-center text-[#fcfbf7] mb-2 tracking-wide">
           Testimoni Penerima Bantuan
         </h2>
         <div className="islamic-divider">
           <span>۞</span>
         </div>
 
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+        <div className="w-full grid grid-cols-2 md:grid-cols-4 gap-6 justify-center">
           {penerima.map((p, i) => (
             <div
               key={i}
               className="card-islamic hover:scale-105 transition-transform duration-300"
             >
-              {/* Foto */}
+              {/* Foto berbentuk kotak */}
               <div
-                className="w-full aspect-square flex items-center justify-center islamic-arch overflow-hidden"
-                style={{
-                  background: "linear-gradient(135deg, #1a8a5f15, #c9a22715)",
-                }}
+                className="relative w-full aspect-square flex items-center justify-center rounded-lg border border-[#d4af37]/35 overflow-hidden bg-[#0a1931]"
               >
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img
+                <Image
                   src={p.img}
                   alt={p.name}
-                  className="w-full h-full object-cover"
-                  onError={(e) => {
-                    const target = e.currentTarget;
-                    target.style.display = "none";
-                    const fallback = target.nextElementSibling as HTMLElement;
-                    if (fallback) fallback.style.display = "flex";
-                  }}
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 768px) 50vw, 25vw"
                 />
-                <div
-                  className="w-full h-full items-center justify-center text-5xl font-bold green-text"
-                  style={{ display: "none" }}
-                >
-                  {p.fallback}
-                </div>
               </div>
 
               {/* Keterangan */}
               <div className="p-4 text-center">
-                <h3 className="font-bold text-[#1a3c2a] text-sm md:text-base">
+                <h3 className="font-bold text-[#fcfbf7] text-sm md:text-base">
                   {p.name}
                 </h3>
-                <p className="text-[#1a3c2a]/70 text-sm mt-2">
+                <p className="text-[#fcfbf7]/80 text-sm mt-2 leading-relaxed">
                   {p.testimonial}
                 </p>
-                <div className="mt-3 inline-block green-gradient text-white text-xs font-medium px-3 py-1 rounded-full">
+                <div className="mt-3 inline-block gold-gradient text-xs font-bold px-3 py-1 rounded-full shadow-sm text-[#061124]">
                   {p.prize}
                 </div>
               </div>

@@ -8,9 +8,9 @@ import Footer from "./components/Footer";
 
 export default function Home() {
   return (
-    <div className="flex flex-col min-h-screen bg-white">
+    <div className="flex flex-col min-h-screen bg-[#061124] m-0 p-0 w-full overflow-x-hidden items-center">
       <Confetti />
-      <main className="flex-1">
+      <main className="flex-1 m-0 p-0 w-full flex flex-col items-center">
         <Hero />
         <Hadiah />
         <Testimonials />
