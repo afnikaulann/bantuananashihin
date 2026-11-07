@@ -50,7 +50,7 @@ export default function Footer() {
           <span style={{ color: "#fde047" }}>۞</span>
         </div>
         <p className="text-[#fcfbf7]/50 text-xs">
-          &copy; 2025 Ustadz Hilmi Firdaus. Semua Hak Dilindungi.
+          &copy; 2026 Ustadz Hilmi Firdaus. Semua Hak Dilindungi.
         </p>
       </div>
     </footer>
